@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial;
+  background-color: #0a1730;
+}
+/* ************************************** */
+/* Start container styling */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* responsive */
+/* Small  */
+@media (min-width: 810px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium  */
+@media (min-width: 992px) {
+  .container {
+    width: 700px;
+  }
+}
+/* Large  */
+@media (min-width: 1200px) {
+  .container {
+    width: 900px;
+  }
+}
+/* End container styling */
+/* ************************************** */
+/* Start Post Style */
+.posts-title {
+  text-transform: uppercase;
+  position: relative;
+  width: fit-content;
+  margin: 0px auto 30px;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.posts-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%2300FDCF' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-size: auto 100%;
+  background-repeat: round;
+  height: 10px;
+  bottom: -10px;
+}
+.posts {
+  position: relative;
+  top: 100px;
+  padding: 20px 0;
+}
+.post {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 100%;
+  margin: 0px auto 35px;
+}
+.post .post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #cfcacaf0;
+  border-radius: 10px;
+}
+.post .post-header .one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.post .post-header .one .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.post .post-header .one img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.post .post-header .one .info h2 {
+  display: inline-block;
+  margin: 0;
+  line-break: anywhere;
+}
+.post .post-header h4 {
+  color: #585656;
+  margin: 0;
+}
+.post .post-body {
+  padding: 15px;
+  cursor: pointer;
+}
+.post .post-body .image {
+  width: 100%;
+  margin: 0px auto;
+}
+.post .post-body img {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  height: 250px;
+}
+.post .post-body h2 {
+  text-align: center;
+}
+.post .post-body p {
+  line-height: 1.3;
+}
+.post .post-footer {
+  color: gray;
+  font-weight: bold;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post .post-footer div span {
+  color: #00bdfe;
+}
+/* End Post Style */
+/* ************************************** */
+/* Start add Post Icon */
+.add-post-icon {
+  position: fixed;
+  color: white;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: #00bdfe;
+  border-radius: 50%;
+  font-size: 45px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.add-post-icon span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  user-select: none;
+}
+.add-post-icon:hover {
+  background-color: #006f95;
+}
+/* End add Post Icon */
+/* ************************************** */
+/* Start custom add image button  */
+.new-post-form h3.upload-title,
+.register h3.upload-title {
+  text-align: center;
+  color: #0f7ce2;
+  margin-top: 25px;
+}
+.new-post-form input[type="file"],
+.register input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -500;
+}
+.new-post-form #upload-image,
+.register #upload-image {
+  display: block;
+  padding: 10px 40px;
+  margin: 10px auto 30px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #0f7ce28f;
+  color: white;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 77%);
+  transition-duration: 0.5s;
+  position: relative;
+}
+.new-post-form #upload-image::before,
+.register #upload-image::before {
+  content: "";
+  position: absolute;
+  width: 250%;
+  height: 2px;
+  left: 50%;
+  translate: -50% 0;
+  bottom: -15px;
+  background-color: #0f7ce2;
+}
+.new-post-form #upload-image:hover,
+.register #upload-image:hover {
+  background-color: #0f7ce2;
+}
+/* End custom add image button */
+/* ************************************** */
+::-webkit-scrollbar {
+  width: 17px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #00abe5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #005c7c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2097d2;
+}
+/* ************************************** */
+/* Start loading  */
+.loading {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 70px auto 0px;
+  display: none;
+}
+.loading div {
+  position: absolute;
+  top: 33.33333px;
+  width: 13.33333px;
+  height: 13.33333px;
+  border-radius: 50%;
+  background-color: white;
+}
+.loading div:nth-child(1) {
+  left: 8px;
+  animation: loading1 0.6s infinite;
+}
+.loading div:nth-child(2) {
+  left: 8px;
+  animation: loading2 0.6s infinite;
+}
+.loading div:nth-child(3) {
+  left: 32px;
+  animation: loading2 0.6s infinite;
+}
+.loading div:nth-child(4) {
+  left: 56px;
+  animation: loading3 0.6s infinite;
+}
+@keyframes loading1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loading2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+@keyframes loading3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+/* End loading  */
+/* ************************************** */

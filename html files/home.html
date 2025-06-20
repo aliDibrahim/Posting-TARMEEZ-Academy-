@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../images/icon.png" />
+    <title>Posts website</title>
+    <!-- axios library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- css file -->
+    <link rel="stylesheet" href="../css files/home.css" />
+    <link rel="stylesheet" href="../css files/nav&profile.css" />
+    <link rel="stylesheet" href="../css files/login&register.css" />
+    <link rel="stylesheet" href="../css files/all.min.css" />
+  </head>
+  <body>
+    <!-- Start Nav -->
+    <nav>
+      <div class="logo">
+        <img src="../images/logo.png" alt="logo" />
+        <h2>Posts</h2>
+      </div>
+      <div class="info"></div>
+      <ul>
+        <li>
+          <a href="home.html" class="active"
+            ><i class="fa-solid fa-house"></i>Home</a
+          >
+        </li>
+        <li id="profile">
+          <a href="profile.html"><i class="fa-regular fa-user"></i>Profile</a>
+        </li>
+        <li id="navLogin">
+          <a><i class="fa-solid fa-right-from-bracket"></i>Login</a>
+        </li>
+        <li id="navRegister">
+          <a><i class="fa-regular fa-registered"></i>Register</a>
+        </li>
+        <li id="navLogout">
+          <a><i class="fa-solid fa-right-from-bracket"></i>logout</a>
+        </li>
+      </ul>
+      <div class="icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <!-- End Nav -->
+    <!-- ****************************************************************** -->
+    <!-- Start Posts -->
+    <div class="container">
+      <!-- Start posts -->
+      <div class="posts" id="posts">
+        <p class="posts-title">Tarmeez Posts</p>
+      </div>
+    </div>
+    <!-- End posts -->
+    <!-- ****************************************************************** -->
+    <!--Start Login form -->
+    <div class="login">
+      <h1>Login</h1>
+      <div class="form">
+        <input type="text" placeholder="User name" id="login-user-name" />
+        <input type="password" placeholder="Password" id="login-password" />
+        <input type="submit" value="login" id="login" />
+      </div>
+      <span id="close">X</span>
+    </div>
+    <!--End Login form -->
+    <!-- ****************************************************************** -->
+    <!-- Start register form  -->
+    <div class="register">
+      <h1>Register</h1>
+      <div class="form">
+        <input type="text" placeholder="User name" id="register-user-name" />
+        <input type="password" placeholder="Password" id="register-password" />
+        <input type="text" placeholder="Name" id="name" />
+        <h3 class="upload-title">Upload your image</h3>
+        <input type="file" id="personal-image" />
+        <button id="upload-image">Upload</button>
+        <input type="submit" value="register" id="register" />
+      </div>
+      <span id="close">X</span>
+    </div>
+    <!-- Start register form  -->
+    <!-- ****************************************************************** -->
+    <!-- Start new post form -->
+    <div class="new-post-form">
+      <h1>New Post</h1>
+      <div class="form">
+        <input type="text" placeholder="Post Title" id="title" />
+        <textarea id="post-body" placeholder="body"></textarea>
+        <h3 class="upload-title">Upload your image</h3>
+        <input type="file" id="post-image" />
+        <button id="upload-image">Upload</button>
+        <input type="submit" value="create" id="create-post" />
+      </div>
+      <span id="close">X</span>
+    </div>
+    <!-- End new post form -->
+    <!-- ****************************************************************** -->
+    <!-- Start add Post Icon -->
+    <div class="add-post-icon"><span>+</span></div>
+    <!-- End add Post Icon -->
+    <!-- ****************************************************************** -->
+    <!-- Start loading -->
+    <div class="loading">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <!-- End loading -->
+    <!-- ****************************************************************** -->
+    <script src="../js files/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial;
+  background-color: #0a1730;
+}
+.login,
+.register,
+.new-post-form {
+  width: 85%;
+  margin: 0px auto;
+  position: fixed;
+  top: 80px;
+  background-color: #005d7df0;
+  padding: 40px;
+  left: 50%;
+  translate: -50%;
+  border-radius: 0px 0 20px 20px;
+  opacity: 0;
+  z-index: -10;
+  transition: 0.5s;
+}
+.new-post-form {
+  height: 85%;
+  overflow: auto;
+}
+.new-post-form::-webkit-scrollbar {
+  width: 0em;
+}
+
+.new-post-form::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.new-post-form::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.new-post-form::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}
+.login.show,
+.register.show,
+.new-post-form.show {
+  opacity: 1;
+  z-index: 110;
+}
+.login h1,
+.register h1,
+.new-post-form h1 {
+  text-align: center;
+  margin: 0px auto 20px;
+  color: white;
+  font-size: 50px;
+  border-bottom: 2px solid #0f1010;
+  width: fit-content;
+  padding: 5px 20px;
+}
+.login .form,
+.register .form,
+.new-post-form .form {
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.login .form input[type="text"],
+.login .form input[type="password"],
+.register .form input[type="text"],
+.register .form input[type="password"] {
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 7px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.login .form :focus,
+.register .form :focus,
+.new-post-form .form :focus {
+  outline: none;
+}
+.login .form ::placeholder,
+.register .form ::placeholder,
+.new-post-form .form ::placeholder {
+  transition: 0.3s;
+  color: #0f7ce2;
+}
+.login .form :focus::placeholder,
+.register .form :focus::placeholder,
+.new-post-form :focus::placeholder {
+  opacity: 0;
+}
+.login span,
+.register span,
+.new-post-form span {
+  color: #0f7ce2;
+  display: block;
+  margin: 10px auto;
+  width: fit-content;
+  cursor: pointer;
+}
+.login .form input[type="submit"],
+.register .form input[type="submit"],
+.new-post-form .form input[type="submit"] {
+  display: block;
+  width: fit-content;
+  margin: 0px auto;
+  padding: 10px 15px;
+  color: #0f7ce2;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.login .form input[type="submit"]:hover,
+.register .form input[type="submit"]:hover,
+.new-post-form .form input[type="submit"]:hover {
+  color: white;
+  background-color: #0f7ce2;
+}
+.login #close,
+.register #close,
+.new-post-form #close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  transition: 0.3s;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+.login #close:hover,
+.register #close:hover,
+.new-post-form #close:hover {
+  color: red;
+}
+/* ****************************************************************** */
+/*  Create New Post */
+.new-post-form .form input[type="text"],
+.new-post-form textarea {
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 7px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.new-post-form textarea {
+  height: 200px;
+  resize: none;
+}
+/* ****************************************************************** */
+/* responsive */
+@media (min-width: 650px) {
+  .login,
+  .register,
+  .new-post-form {
+    width: 500px;
+  }
+}

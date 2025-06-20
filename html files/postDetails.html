@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../images/icon.png" />
+    <title>Posts Website</title>
+    <!-- axios library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- css file -->
+    <link rel="stylesheet" href="../css files/home.css" />
+    <link rel="stylesheet" href="../css files/nav&profile.css" />
+    <link rel="stylesheet" href="../css files/postDetails.css" />
+    <link rel="stylesheet" href="../css files/all.min.css" />
+  </head>
+  <body>
+    <!-- Start Nav -->
+    <nav>
+      <div class="logo">
+        <img src="../images/logo.png" alt="logo" />
+        <h2>Posts</h2>
+      </div>
+      <div class="info details"></div>
+    </nav>
+    <!-- End Nav -->
+    <!-- ****************************************************************** -->
+    <div class="container">
+      <!-- Start posts -->
+      <div class="post-details">
+        <a href="home.html"
+          ><i class="fa-solid fa-arrow-left"></i>Back to home</a
+        >
+        <p class="details-title">
+          <i class="fa-solid fa-circle-info"></i>Post Details
+        </p>
+        <!-- Style of the following post is the same as the style of the post on the home page. -->
+        <div class="post"></div>
+        <div class="comments">
+          <h1><i class="fa-regular fa-comment"></i>Comments</h1>
+        </div>
+        <div class="add-comment">
+          <h3><i class="fa-solid fa-plus"></i>Add your comment here</h3>
+          <input type="text" placeholder="write here" id="comment-input" />
+          <input type="submit" value="send" id="send-comment" />
+        </div>
+        <div class="update-post">
+          <h3 class="title"><i class="fa-solid fa-pen"></i>Update the post</h3>
+          <input type="text" placeholder="New title" id="new-title" />
+          <input type="text" placeholder="New body" id="new-body" />
+          <h3 class="update-image">Upload your image</h3>
+          <input type="file" id="new-image" />
+          <button id="upload-new-image">Upload new image</button>
+          <input type="submit" value="update" id="update-post" />
+        </div>
+        <div class="delete-post">
+          <h3><i class="fa-solid fa-trash"></i>Delete your post</h3>
+          <div>
+            <span id="delete-post-btn"
+              ><i class="fa-solid fa-trash"></i>delete</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ****************************************************************** -->
+    <script src="../js files/postDetails.js"></script>
+  </body>
+</html>
